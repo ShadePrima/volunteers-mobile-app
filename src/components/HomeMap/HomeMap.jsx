@@ -6,7 +6,7 @@ const HomeMap = () => {
   return (
     <View
       style={{
-        height: 300,
+        height: 450,
         backgroundColor: "#a0abff",
         justifyContent: "center",
         alignItems: "center",
