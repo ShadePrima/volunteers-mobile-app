@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "volunteers-mobile-app",
+    "slug": "volunteers-mobile-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
