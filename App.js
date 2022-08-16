@@ -4,11 +4,13 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { StyleSheet, Text, View } from "react-native";
 
 import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
+import DestinationSearch from "./src/screens/DestinationSearch";
 
 export default function App() {
   return (
     <View>
-      <HomeScreen />
+      <DestinationSearch />
+      {/* <HomeScreen /> */}
       {/* <StatusBar style="auto" /> */}
     </View>
   );
