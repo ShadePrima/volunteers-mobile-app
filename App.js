@@ -1,15 +1,17 @@
 import React from "react";
 // import { StatusBar } from "expo-status-bar";
-import Icon from "react-native-vector-icons/FontAwesome";
+
 import { StyleSheet, Text, View } from "react-native";
 
-import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
-import DestinationSearch from "./src/screens/DestinationSearch";
+// import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
+// import DestinationSearch from "./src/screens/DestinationSearch";
+import SearchResults from "./src/screens/SearchResults";
 
 export default function App() {
   return (
     <View>
-      <DestinationSearch />
+      <SearchResults />
+      {/* <DestinationSearch /> */}
       {/* <HomeScreen /> */}
       {/* <StatusBar style="auto" /> */}
     </View>
