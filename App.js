@@ -3,16 +3,16 @@ import React from "react";
 
 import { StyleSheet, Text, View } from "react-native";
 
-// import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
+import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
 // import DestinationSearch from "./src/screens/DestinationSearch";
 import SearchResults from "./src/screens/SearchResults";
 
 export default function App() {
   return (
     <View>
-      <SearchResults />
+      {/* <SearchResults /> */}
       {/* <DestinationSearch /> */}
-      {/* <HomeScreen /> */}
+      <HomeScreen />
       {/* <StatusBar style="auto" /> */}
     </View>
   );
