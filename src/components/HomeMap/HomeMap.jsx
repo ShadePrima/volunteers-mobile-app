@@ -1,9 +1,21 @@
 import React from "react";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
-import { Image, Text, View } from "react-native";
+import { FlatList, Image, Text, View } from "react-native";
+import cars from "../../assets/data/cars";
 
 const HomeMap = () => {
+  const getImage = (type) => {
+    if (type === "UberX") {
+      return require("../../assets/images/top-UberX.png");
+    }
+    if (type === "Comfort") {
+      return require("../../assets/images/top-Comfort.png");
+    }
+    if (type === "UberXL") {
+      return require("../../assets/images/top-UberXL.png");
+    }
+  };
   return (
     <View>
       <MapView
@@ -19,21 +31,24 @@ const HomeMap = () => {
           longitudeDelta: 0.0421,
         }}
       >
-        <Marker
-          coordinate={{
-            latitude: 47.760347,
-            longitude: 35.138781,
-          }}
-        >
-          <Image
-            style={{
-              width: 30,
-              height: 30,
-              resizeMode: "contain",
+        {cars.map((car) => (
+          <Marker
+            key={car.id}
+            coordinate={{
+              latitude: car.latitude,
+              longitude: car.longitude,
             }}
-            source={require("../../assets/images/top-UberX.png")}
-          />
-        </Marker>
+          >
+            <Image
+              style={{
+                width: 30,
+                height: 30,
+                resizeMode: "contain",
+              }}
+              source={getImage(car.type)}
+            />
+          </Marker>
+        ))}
       </MapView>
     </View>
   );
