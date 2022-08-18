@@ -1,5 +1,6 @@
 import React from "react";
-// import { StatusBar } from "expo-status-bar";
+
+import { StatusBar } from "expo-status-bar";
 
 import { StyleSheet, Text, View } from "react-native";
 
@@ -10,10 +11,10 @@ import SearchResults from "./src/screens/SearchResults";
 export default function App() {
   return (
     <View>
-      {/* <SearchResults /> */}
+      <SearchResults />
       {/* <DestinationSearch /> */}
-      <HomeScreen />
-      {/* <StatusBar style="auto" /> */}
+      {/* <HomeScreen /> */}
+      <StatusBar style="auto" />
     </View>
   );
 }
