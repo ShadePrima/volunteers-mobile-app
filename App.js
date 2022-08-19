@@ -5,14 +5,14 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
 import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
-// import DestinationSearch from "./src/screens/DestinationSearch";
+import DestinationSearch from "./src/screens/DestinationSearch";
 import SearchResults from "./src/screens/SearchResults";
 
 export default function App() {
   return (
     <View>
-      <SearchResults />
-      {/* <DestinationSearch /> */}
+      {/* <SearchResults /> */}
+      <DestinationSearch />
       {/* <HomeScreen /> */}
       <StatusBar style="auto" />
     </View>

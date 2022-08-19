@@ -44,6 +44,11 @@ const HomeMap = () => {
                 width: 30,
                 height: 30,
                 resizeMode: "contain",
+                transform: [
+                  {
+                    rotate: `${car.heading}deg`,
+                  },
+                ],
               }}
               source={getImage(car.type)}
             />
