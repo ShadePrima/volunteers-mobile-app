@@ -7,6 +7,8 @@ import styles from "./styles";
 
 import PlaceRow from "./PlaceRow.jsx";
 
+navigator.geolocation = require("react-native-geolocation-service");
+
 const DestinationSearch = () => {
   const [originPlace, setOriginPlace] = React.useState(null);
   const [destinationPlace, setDestinationPlace] = React.useState(null);
@@ -23,11 +25,13 @@ const DestinationSearch = () => {
         <GooglePlacesAutocomplete
           placeholder="Where from ?"
           onPress={(data, details = null) => {
-            setDestinationPlace({ data, details });
+            setOriginPlace({ data, details });
             console.log(data, details);
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
+          currentLocation={true}
+          currentLocationLabel="Current location"
           styles={{
             textInput: styles.googleInput,
             container: styles.autocompleteContainer,
@@ -60,6 +64,8 @@ const DestinationSearch = () => {
             key: "AIzaSyAFZdRRBDQVvcbi8FT4_HQfCqVPy6T6NVo",
             language: "en",
           }}
+          currentLocation={true}
+          currentLocationLabel="Current location"
           renderRow={(data) => <PlaceRow data={data} />}
         />
 
